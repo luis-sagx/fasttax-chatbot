@@ -151,25 +151,44 @@ Las reglas se activan en cualquier momento sin depender del contexto.
 
 ### 5. **actions/actions.py** - Acciones Personalizadas
 
-**3 acciones educativas** (esqueleto funcional):
+### Probar la calculadora
 
-#### `ActionExplicarCalculoEjemplo`
+Escribe cualquiera de estas frases:
 
-- Proporciona explicaciones detalladas paso a paso
-- Muestra cómo aplicar la tabla del SRI
-- Explica cada componente del cálculo
+- `quiero calcular mi impuesto`
+- `calcula mi impuesto a la renta`
+- `ayúdame a calcular cuánto debo pagar`
+- `calculadora de impuestos`
 
-#### `ActionInformacionNormativaSRI`
+---
 
-- Información sobre LORTI y reglamentos
-- Referencias a resoluciones del SRI
-- Temas específicos de normativa
+## Ejemplo de Conversación
 
-#### `ActionCompararCasos`
+```
+Tu: calcula mi impuesto
 
-- Compara diferentes situaciones tributarias
-- Muestra diferencias entre escenarios
-- Ayuda a entender aplicación práctica
+Bot: Cuales son tus ingresos anuales totales en dolares? (solo el numero, ejemplo: 25000)
+
+Tu: 30000
+
+Bot: Cuanto gastaste en gastos personales deducibles durante el año? (ejemplo: 5000)
+
+Tu: 6000
+
+Bot: Cuantas cargas familiares tienes? (0, 1, 2, 3, 4, 5 o mas)
+
+Tu: 2
+
+Bot: Cuanto fue tu aporte personal al IESS durante el año? (ejemplo: 2000)
+
+Tu: 2835
+
+Bot: Cuanto te retuvieron en la fuente durante el año? (ejemplo: 1500)
+
+Tu: 1200
+
+Bot: [Muestra cálculo detallado con resultado final]
+```
 
 ---
 

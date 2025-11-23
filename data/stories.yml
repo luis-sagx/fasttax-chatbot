@@ -123,3 +123,11 @@ stories:
       - action: utter_example
       - intent: thank
       - action: utter_thank
+
+  - story: calcular impuesto interactivo
+    steps:
+      - intent: calcular_impuesto
+      - action: calculo_impuesto_form
+      - active_loop: calculo_impuesto_form
+      - active_loop: null
+      - action: action_calcular_impuesto_renta

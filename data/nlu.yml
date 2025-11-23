@@ -251,3 +251,18 @@ nlu:
       - gracias por la información
       - te agradezco la ayuda
       - gracias bot
+
+  - intent: calcular_impuesto
+    examples: |
+      - quiero calcular mi impuesto
+      - calcula mi impuesto a la renta
+      - ayúdame a calcular cuánto debo pagar
+      - necesito saber cuánto es mi impuesto
+      - calcula mi IR
+      - quiero saber mi impuesto
+      - cálculo de impuesto
+      - calcular impuesto
+      - cuánto tengo que pagar de impuesto
+      - ayuda con el cálculo
+      - hacer el cálculo del impuesto
+      - calculadora de impuestos

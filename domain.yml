@@ -22,6 +22,67 @@ intents:
   - ask_facturacion_electronica
   - ask_obligaciones_tributarias
   - thank
+  - calcular_impuesto
+  - inform_ingresos
+  - inform_gastos
+  - inform_cargas
+  - inform_iess
+  - inform_retenciones
+
+slots:
+  ingresos_anuales:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: calculo_impuesto_form
+            requested_slot: ingresos_anuales
+
+  gastos_personales:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: calculo_impuesto_form
+            requested_slot: gastos_personales
+
+  cargas_familiares:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: calculo_impuesto_form
+            requested_slot: cargas_familiares
+
+  aporte_iess:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: calculo_impuesto_form
+            requested_slot: aporte_iess
+
+  retenciones:
+    type: float
+    influence_conversation: true
+    mappings:
+      - type: from_text
+        conditions:
+          - active_loop: calculo_impuesto_form
+            requested_slot: retenciones
+
+forms:
+  calculo_impuesto_form:
+    required_slots:
+      - ingresos_anuales
+      - gastos_personales
+      - cargas_familiares
+      - aporte_iess
+      - retenciones
 
 responses:
   utter_greet:
@@ -80,6 +141,25 @@ responses:
 
   utter_thank:
     - text: "De nada! Estoy aqui para ayudarte con cualquier duda sobre el Impuesto a la Renta y normativa tributaria del SRI. No dudes en preguntar si necesitas mas informacion."
+
+  utter_ask_ingresos_anuales:
+    - text: "Cuales son tus ingresos anuales totales en dolares? (solo el numero, ejemplo: 25000)"
+
+  utter_ask_gastos_personales:
+    - text: "Cuanto gastaste en gastos personales deducibles durante el año? (ejemplo: 5000)"
+
+  utter_ask_cargas_familiares:
+    - text: "Cuantas cargas familiares tienes? (0, 1, 2, 3, 4, 5 o mas)"
+
+  utter_ask_aporte_iess:
+    - text: "Cuanto fue tu aporte personal al IESS durante el año? (ejemplo: 2000)"
+
+  utter_ask_retenciones:
+    - text: "Cuanto te retuvieron en la fuente durante el año? (ejemplo: 1500)"
+
+actions:
+  - action_calcular_impuesto_renta
+  - validate_calculo_impuesto_form
 
 session_config:
   session_expiration_time: 60
