@@ -1,0 +1,27 @@
+version: "3.1"
+
+rules:
+  - rule: Despedida cuando el usuario se despide
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Identificación como bot cuando se pregunta
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Información sobre FastTax cuando se pregunta directamente
+    steps:
+      - intent: ask_about_fasttax
+      - action: utter_about_fasttax
+
+  - rule: Ayuda general siempre disponible
+    steps:
+      - intent: ask_ayuda
+      - action: utter_ayuda
+
+  - rule: Agradecimiento cuando el usuario da las gracias
+    steps:
+      - intent: thank
+      - action: utter_thank

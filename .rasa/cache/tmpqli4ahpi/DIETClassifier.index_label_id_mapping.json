@@ -1,0 +1,22 @@
+{
+  "0": "affirm",
+  "1": "ask_about_fasttax",
+  "2": "ask_ayuda",
+  "3": "ask_base_imponible",
+  "4": "ask_calculo_impuesto",
+  "5": "ask_categorias_gastos",
+  "6": "ask_deducibles",
+  "7": "ask_facturacion_electronica",
+  "8": "ask_formulario_sri",
+  "9": "ask_gastos_personales",
+  "10": "ask_obligaciones_tributarias",
+  "11": "ask_plazos",
+  "12": "ask_proceso_declaracion",
+  "13": "ask_retencion",
+  "14": "ask_tabla_impuesto",
+  "15": "bot_challenge",
+  "16": "deny",
+  "17": "goodbye",
+  "18": "greet",
+  "19": "request_example"
+}

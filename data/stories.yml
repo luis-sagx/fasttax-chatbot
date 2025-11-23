@@ -1,0 +1,125 @@
+version: "3.1"
+
+stories:
+  - story: saludo inicial y presentación
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_about_fasttax
+      - action: utter_about_fasttax
+
+  - story: consulta sobre gastos personales
+    steps:
+      - intent: ask_gastos_personales
+      - action: utter_gastos_personales
+      - intent: affirm
+      - action: utter_categorias_gastos
+
+  - story: información sobre categorías de gastos
+    steps:
+      - intent: ask_categorias_gastos
+      - action: utter_categorias_gastos
+
+  - story: proceso completo de declaración
+    steps:
+      - intent: ask_proceso_declaracion
+      - action: utter_proceso_declaracion
+
+  - story: consulta sobre cálculo de impuestos
+    steps:
+      - intent: ask_calculo_impuesto
+      - action: utter_calculo_impuesto
+      - intent: request_example
+      - action: utter_example
+
+  - story: carga de facturas XML
+    steps:
+      - intent: ask_facturacion_electronica
+      - action: utter_facturacion_electronica
+      - intent: affirm
+      - action: utter_gastos_personales
+
+  - story: información sobre deducciones
+    steps:
+      - intent: ask_deducibles
+      - action: utter_deducibles
+
+  - story: consulta formulario SRI
+    steps:
+      - intent: ask_formulario_sri
+      - action: utter_formulario_sri
+
+  - story: información sobre retenciones
+    steps:
+      - intent: ask_retencion
+      - action: utter_retencion
+
+  - story: consulta base imponible
+    steps:
+      - intent: ask_base_imponible
+      - action: utter_base_imponible
+
+  - story: consulta sobre plazos
+    steps:
+      - intent: ask_plazos
+      - action: utter_plazos
+
+  - story: solicitud de ayuda general
+    steps:
+      - intent: ask_ayuda
+      - action: utter_ayuda
+
+  - story: ejemplo de cálculo directo
+    steps:
+      - intent: request_example
+      - action: utter_example
+
+  - story: flujo completo información tributaria
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_proceso_declaracion
+      - action: utter_proceso_declaracion
+      - intent: ask_gastos_personales
+      - action: utter_gastos_personales
+      - intent: affirm
+      - action: utter_categorias_gastos
+      - intent: ask_calculo_impuesto
+      - action: utter_calculo_impuesto
+
+  - story: consulta RPA
+    steps:
+      - intent: ask_tabla_impuesto
+      - action: utter_tabla_impuesto
+
+  - story: consulta obligaciones tributarias
+    steps:
+      - intent: ask_obligaciones_tributarias
+      - action: utter_obligaciones_tributarias
+
+  - story: despedida después de ayuda
+    steps:
+      - intent: ask_ayuda
+      - action: utter_ayuda
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: usuario agradece despues de consulta
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_gastos_personales
+      - action: utter_gastos_personales
+      - intent: thank
+      - action: utter_thank
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: usuario agradece despues de ejemplo
+    steps:
+      - intent: ask_calculo_impuesto
+      - action: utter_calculo_impuesto
+      - intent: request_example
+      - action: utter_example
+      - intent: thank
+      - action: utter_thank

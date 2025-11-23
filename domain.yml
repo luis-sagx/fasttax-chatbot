@@ -1,0 +1,86 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - bot_challenge
+  - ask_about_fasttax
+  - ask_gastos_personales
+  - ask_categorias_gastos
+  - ask_calculo_impuesto
+  - ask_deducibles
+  - ask_proceso_declaracion
+  - ask_formulario_sri
+  - ask_retencion
+  - ask_base_imponible
+  - ask_plazos
+  - ask_ayuda
+  - request_example
+  - ask_tabla_impuesto
+  - ask_facturacion_electronica
+  - ask_obligaciones_tributarias
+  - thank
+
+responses:
+  utter_greet:
+    - text: "Hola! Soy FastTax, tu asistente de consultas sobre el Impuesto a la Renta en Ecuador. Puedo ayudarte a entender la normativa tributaria del SRI. Que informacion necesitas?"
+
+  utter_goodbye:
+    - text: "Hasta pronto! Si necesitas mas informacion sobre normativa tributaria, aqui estare. Que tengas un excelente dia!"
+
+  utter_iamabot:
+    - text: "Soy FastTax, un asistente virtual especializado en resolver dudas sobre el Impuesto a la Renta y normativa tributaria ecuatoriana del SRI. Estoy aqui para explicarte conceptos, procedimientos y requisitos fiscales."
+
+  utter_about_fasttax:
+    - text: "FastTax es un asistente virtual educativo que te ayuda a comprender la normativa del Impuesto a la Renta en Ecuador.\n\nPuedo ayudarte con informacion sobre:\n- Gastos personales deducibles y sus categorias\n- Calculo del Impuesto a la Renta segun tablas del SRI\n- Formularios de declaracion (Formulario 102)\n- Plazos y obligaciones tributarias\n- Retenciones en la fuente\n- Base imponible y deducciones permitidas\n\nMi objetivo es resolver tus dudas sobre tributacion de forma clara y precisa."
+
+  utter_facturacion_electronica:
+    - text: "FACTURACION ELECTRONICA EN ECUADOR:\n\nSegun el SRI, la facturacion electronica es obligatoria y los comprobantes se emiten en formato XML con:\n- RUC del emisor y receptor\n- Fecha y numero de autorizacion\n- Base imponible e IVA\n- Retenciones (si aplica)\n- Firma electronica\n\nEstos comprobantes son validos para sustentar gastos personales deducibles en tu declaracion de Impuesto a la Renta.\n\nNecesitas informacion sobre que gastos son deducibles?"
+
+  utter_gastos_personales:
+    - text: "GASTOS PERSONALES DEDUCIBLES SEGUN EL SRI:\n\nLos gastos personales son aquellos que puedes restar de tu base imponible para reducir el impuesto a pagar.\n\nLIMITE MAXIMO DE DEDUCCION:\nEl menor valor entre:\n- 50% de tus ingresos gravados\n- 7 fracciones basicas desgravadas ($12,816 para 2025)\n\nREQUISITOS:\n- Deben estar sustentados con comprobantes electronicos validos\n- A tu nombre o de tu conyuge/conviviente o cargas familiares\n- Deben pertenecer a las categorias reconocidas por el SRI\n\nQuieres conocer las categorias de gastos permitidas?"
+
+  utter_categorias_gastos:
+    - text: "CATEGORIAS DE GASTOS PERSONALES DEDUCIBLES (SRI):\n\n1. VIVIENDA (Limite: 0.325 fracciones basicas)\n   Arriendo, servicios basicos (luz, agua, telefono), impuestos prediales, alicuotas condominios\n\n2. ALIMENTACION (Limite: 0.325 fracciones basicas)\n   Supermercados, tiendas, restaurantes, pensiones alimenticias\n\n3. SALUD (Limite: 1.3 fracciones basicas)\n   Medicinas, consultas medicas, hospitales, seguros medicos, honorarios profesionales de salud\n\n4. EDUCACION (Limite: 0.325 fracciones basicas)\n   Matriculas, pensiones, utiles escolares, libros, uniformes, transporte escolar, educacion superior\n\n5. VESTIMENTA (Limite: 0.325 fracciones basicas)\n   Ropa, calzado para ti y tu familia\n\n6. TURISMO (Limite: 0.325 fracciones basicas)\n   Alojamiento, transporte turistico, alimentacion en actividades turisticas\n\nFraccion basica 2025: $12,816 (cada 0.325 = $4,165 aprox.)"
+
+  utter_calculo_impuesto:
+    - text: "CALCULO DEL IMPUESTO A LA RENTA (segun SRI):\n\nPASO 1: Calcular Base Imponible\nBase Imponible = Ingresos Gravados - Gastos Deducibles - Aporte IESS Personal\n\nPASO 2: Aplicar Tabla Progresiva\nSe aplica la tabla de impuesto a la renta vigente (varia segun tramos de ingresos)\n\nPASO 3: Calcular Rebaja por Gastos Personales\nRebaja = Hasta 20% del impuesto causado (segun gastos proyectados)\n\nPASO 4: Calcular Impuesto Neto\nImpuesto Neto = Impuesto Causado - Rebaja - Retenciones en la Fuente - Anticipos Pagados\n\nSi el resultado es positivo: impuesto a pagar\nSi es negativo: saldo a favor (devolucion)\n\nQuieres ver un ejemplo practico o conocer la tabla progresiva?"
+
+  utter_deducibles:
+    - text: "ELEMENTOS DEDUCIBLES Y NO DEDUCIBLES (SRI):\n\nSI SON DEDUCIBLES:\n- Gastos personales en categorias permitidas (hasta limite legal)\n- Aporte personal obligatorio al IESS\n- Dividendos exentos (si aplica)\n- Ingresos por decimo tercero y decimo cuarto sueldo\n- Fondos de reserva\n\nSE RESTAN DEL IMPUESTO CAUSADO:\n- Retenciones en la fuente realizadas\n- Anticipos de impuesto pagados\n- Credito tributario de años anteriores\n\nNO SON DEDUCIBLES:\n- Gastos sin comprobantes electronicos validos\n- Gastos que excedan los limites por categoria\n- Gastos en bienes inmuebles o vehiculos (excepto intereses hipotecarios)\n- Gastos no sustentados o informales\n- Compras a personas no registradas en el RUC"
+
+  utter_proceso_declaracion:
+    - text: "PROCESO DE DECLARACION DEL IMPUESTO A LA RENTA (SRI):\n\nPASO 1: Recopilar informacion\n- Comprobantes de ingresos (rol de pagos, facturas emitidas)\n- Comprobantes de retenciones en la fuente\n- Facturas electronicas de gastos personales\n- Certificado de aportacion al IESS\n\nPASO 2: Clasificar gastos personales\n- Separar por categorias (vivienda, salud, educacion, etc.)\n- Verificar que esten dentro de los limites permitidos\n- Confirmar que sean comprobantes validos (a tu nombre)\n\nPASO 3: Calcular impuesto\n- Determinar base imponible\n- Aplicar tabla progresiva del SRI\n- Calcular rebaja por gastos personales\n- Restar retenciones y anticipos\n\nPASO 4: Llenar Formulario 102 en linea\n- Ingresar a www.sri.gob.ec\n- Completar el formulario con los valores calculados\n- Enviar declaracion electronica\n- Pagar (si hay valor a pagar) o solicitar devolucion (si hay saldo a favor)"
+
+  utter_formulario_sri:
+    - text: "FORMULARIO 102 - DECLARACION DE IMPUESTO A LA RENTA (PERSONAS NATURALES):\n\nEs el formulario oficial del SRI para declarar anualmente.\n\nPRINCIPALES CASILLAS:\n- 801-814: Ingresos (relacion dependencia, honorarios, arriendos, etc.)\n- 807: Gastos personales por categoria (vivienda, salud, educacion, etc.)\n- 831-838: Deducciones (IESS, otros)\n- 839: Base imponible gravada\n- 849: Impuesto causado\n- 850: Rebaja por gastos personales (max. 20%)\n- 859: Impuesto a pagar antes de retenciones\n- 871-877: Retenciones y anticipos\n- 879: Impuesto a pagar o saldo a favor\n\nDONDE DECLARAR:\nPortal web del SRI -> Servicios en Linea -> Declaraciones\n\nIMPORTANTE: Debes tener tu firma electronica o clave de acceso del SRI."
+
+  utter_retencion:
+    - text: "RETENCIONES EN LA FUENTE (SRI):\n\nSon anticipos de impuesto que terceros (empleadores, clientes) descuentan de tus pagos y entregan al SRI en tu nombre.\n\nTIPOS PRINCIPALES:\n\n1. Retencion en Relacion de Dependencia\n- Tu empleador retiene mensualmente segun tabla del SRI\n- Porcentaje varia segun ingresos proyectados y gastos personales\n\n2. Retencion por Servicios Profesionales\n- 10% sobre honorarios (profesionales sin titulo)\n- 8% (profesionales con titulo)\n\n3. Retencion por Servicios en General\n- 2% (servicios con factura)\n- 1% (servicios varios)\n\n4. Retencion por Arriendos\n- 8% sobre el valor del arriendo\n\nAL DECLARAR: Las retenciones se restan del impuesto causado.\nSi tus retenciones superan el impuesto calculado -> Saldo a favor (devolucion)"
+
+  utter_base_imponible:
+    - text: "BASE IMPONIBLE (segun SRI):\n\nEs el monto neto sobre el cual se calcula el Impuesto a la Renta.\n\nFORMULA:\nBase Imponible = Ingresos Gravados - Gastos Personales Deducibles - Aporte Personal IESS - Otras Deducciones\n\nCOMPONENTES:\n\nINGRESOS GRAVADOS:\n- Sueldos y salarios\n- Honorarios profesionales\n- Arriendos de bienes inmuebles\n- Utilidades empresariales\n\nDEDUCCIONES:\n- Gastos personales (hasta limite legal)\n- Aporte personal al IESS (9.45% de ingresos)\n- Ingresos exentos (decimos, fondos de reserva)\n\nLa tabla progresiva del SRI se aplica sobre esta base imponible para calcular el impuesto causado."
+
+  utter_plazos:
+    - text: "PLAZOS DE DECLARACION DEL IMPUESTO A LA RENTA (SRI):\n\nLa declaracion anual se presenta en MARZO del año siguiente, segun el noveno digito de tu RUC o cedula:\n\n- Digito 1: hasta 10 de marzo\n- Digito 2: hasta 12 de marzo\n- Digito 3: hasta 14 de marzo\n- Digito 4: hasta 16 de marzo\n- Digito 5: hasta 18 de marzo\n- Digito 6: hasta 20 de marzo\n- Digito 7: hasta 22 de marzo\n- Digito 8: hasta 24 de marzo\n- Digito 9: hasta 26 de marzo\n- Digito 0: hasta 28 de marzo\n\nINCUMPLIMIENTO:\n- Multa: desde $30 hasta $150 segun el retraso\n- Intereses por mora sobre valores pendientes\n\nRECOMENDACION: Prepara tu declaracion con anticipacion para evitar contratiempos."
+
+  utter_ayuda:
+    - text: "PUEDO AYUDARTE CON INFORMACION SOBRE:\n\n- Impuesto a la Renta y calculo tributario\n- Gastos personales deducibles y sus categorias\n- Base imponible y tabla progresiva del SRI\n- Retenciones en la fuente\n- Formulario 102 y proceso de declaracion\n- Plazos segun tu cedula/RUC\n- Deducciones permitidas y no permitidas\n- Facturacion electronica\n- Obligaciones tributarias\n\nSobre que tema especifico necesitas informacion?"
+
+  utter_example:
+    - text: "EJEMPLO PRACTICO DE CALCULO (segun normativa SRI):\n\nCASO: Maria - Empleada en relacion de dependencia\n\nDATOS:\n- Ingresos anuales: $24,000\n- Aporte IESS personal (9.45%): $2,268\n- Gastos personales validos: $8,000\n\nCALCULO PASO A PASO:\n\n1. BASE IMPONIBLE:\n   $24,000 - $8,000 - $2,268 = $13,732\n\n2. IMPUESTO CAUSADO (tabla progresiva SRI):\n   - Fraccion basica hasta $11,722: $0\n   - Exceso: $13,732 - $11,722 = $2,010\n   - Impuesto sobre exceso (5%): $2,010 x 5% = $101\n   - Impuesto fraccion basica: $0\n   - Total Impuesto Causado: $101\n\n3. REBAJA POR GASTOS PERSONALES (20%):\n   $101 x 20% = $20\n\n4. RETENCIONES REALIZADAS DURANTE EL AÑO:\n   $95\n\n5. IMPUESTO NETO:\n   $101 - $20 - $95 = -$14\n\nRESULTADO: Saldo a favor de $14 (Maria puede solicitar devolucion)"
+
+  utter_tabla_impuesto:
+    - text: "TABLA DE IMPUESTO A LA RENTA  (PERSONAS NATURALES - SRI):\n\nFraccion Basica | Exceso hasta | Impuesto Fraccion | % Exceso\n----------------------------------------------------------------\n$0 - $11,722        | $0      | 0%\n$11,722 - $14,930   | $0      | 5%\n$14,930 - $19,385   | $160    | 10%\n$19,385 - $25,638   | $606    | 12%\n$25,638 - $33,738   | $1,356  | 15%\n$33,738 - $44,721   | $2,571  | 20%\n$44,721 - $59,537   | $4,768  | 25%\n$59,537 - $79,388   | $8,472  | 30%\n$79,388 - $105,580  | $14,427 | 35%\n$105,580 en adelante| $23,594 | 37%\n\nCOMO SE USA?\n1. Ubica tu base imponible en la tabla\n2. Toma el impuesto de la fraccion basica\n3. Calcula el exceso y multiplica por el porcentaje\n4. Suma ambos valores\n\nNecesitas un ejemplo de calculo?"
+
+  utter_obligaciones_tributarias:
+    - text: "OBLIGACIONES TRIBUTARIAS DE PERSONAS NATURALES (SRI):\n\n1. OBTENCION DE RUC\n   Obligatorio si realizas actividad economica\n\n2. EMISION DE COMPROBANTES ELECTRONICOS\n   Si vendes bienes o servicios (factura, nota de venta)\n\n3. DECLARACION DE IVA\n   - Mensual (si tienes RUC)\n   - Formulario 104 (sin relacion de dependencia) o 104A (con relacion de dependencia)\n\n4. DECLARACION DE IMPUESTO A LA RENTA\n   - Anual (todas las personas naturales con ingresos)\n   - Formulario 102\n   - Plazo: marzo del año siguiente\n\n5. RETENCIONES EN LA FUENTE\n   Si eres agente de retencion (negocios, profesionales)\n\n6. ANEXOS TRANSACCIONALES\n   Si superas ciertos umbrales de ventas\n\n7. ACTUALIZACION DE DATOS EN RUC\n   Cada vez que cambies direccion, actividad, etc.\n\nNecesitas detalles sobre alguna obligacion especifica?"
+
+  utter_thank:
+    - text: "De nada! Estoy aqui para ayudarte con cualquier duda sobre el Impuesto a la Renta y normativa tributaria del SRI. No dudes en preguntar si necesitas mas informacion."
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true # Mantener los slots entre sesiones, es decir, conservar la informacion del usuario durante nuevas sesiones.

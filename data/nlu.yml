@@ -1,0 +1,253 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hola
+      - buenos días
+      - buenas tardes
+      - buenas noches
+      - hey
+      - hola FastTax
+      - saludos
+      - qué tal
+      - hola bot
+      - hello
+      - hi
+
+  - intent: goodbye
+    examples: |
+      - adiós
+      - hasta luego
+      - chao
+      - nos vemos
+      - bye
+      - hasta pronto
+      - gracias, eso es todo
+      - me tengo que ir
+      - hasta la próxima
+      - good bye
+      - see you
+
+  - intent: affirm
+    examples: |
+      - sí
+      - si
+      - correcto
+      - exacto
+      - por supuesto
+      - claro
+      - ok
+      - está bien
+      - de acuerdo
+      - yes
+      - afirmativo
+
+  - intent: deny
+    examples: |
+      - no
+      - no gracias
+      - negativo
+      - para nada
+      - no me interesa
+      - no por ahora
+      - no quiero
+      - nope
+
+  - intent: bot_challenge
+    examples: |
+      - eres un bot?
+      - eres un robot?
+      - eres humano?
+      - estoy hablando con una persona?
+      - eres real?
+      - qué eres?
+      - eres inteligencia artificial?
+      - are you a bot?
+      - are you human?
+
+  - intent: ask_about_fasttax
+    examples: |
+      - qué es FastTax?
+      - qué hace FastTax?
+      - para qué sirve FastTax?
+      - cuéntame sobre FastTax
+      - información sobre FastTax
+      - cómo funciona FastTax?
+      - qué es esta plataforma?
+      - explícame FastTax
+      - beneficios de FastTax
+      - ventajas de usar FastTax
+      - por qué usar FastTax?
+
+  - intent: ask_facturacion_electronica
+    examples: |
+      - qué es la facturación electrónica?
+      - cómo funciona la facturación electrónica?
+      - qué información tiene un comprobante electrónico?
+      - qué es un archivo XML?
+      - cómo son las facturas electrónicas en Ecuador?
+      - requisitos de facturación electrónica
+      - comprobantes electrónicos válidos
+      - facturas con firma electrónica
+      - comprobantes del SRI
+      - validez de facturas electrónicas
+
+  - intent: ask_gastos_personales
+    examples: |
+      - qué son gastos personales?
+      - gastos deducibles
+      - puedo deducir gastos?
+      - cuánto puedo deducir?
+      - límite de gastos personales
+      - cómo funcionan los gastos personales?
+      - qué gastos puedo restar?
+      - cuál es el límite de deducción?
+      - rebaja por gastos personales
+
+  - intent: ask_categorias_gastos
+    examples: |
+      - qué categorías de gastos hay?
+      - cuáles son las categorías de gastos personales?
+      - tipos de gastos deducibles
+      - qué gastos reconoce el SRI?
+      - categorías permitidas por el SRI
+      - gastos de vivienda
+      - gastos de alimentación
+      - gastos de salud
+      - gastos de educación
+
+  - intent: ask_calculo_impuesto
+    examples: |
+      - cómo se calcula el impuesto?
+      - cómo calculan el impuesto a la renta?
+      - fórmula del impuesto
+      - cómo se hace el cálculo?
+      - proceso de cálculo tributario
+      - explícame el cálculo del impuesto
+      - cómo saber cuánto debo pagar?
+      - cómo calcular mi impuesto?
+      - método de cálculo
+
+  - intent: ask_deducibles
+    examples: |
+      - qué puedo deducir?
+      - qué es deducible?
+      - qué no puedo deducir?
+      - qué gastos son válidos?
+      - requisitos para deducir
+      - qué facturas son válidas?
+      - puedo deducir todo?
+      - limitaciones de deducciones
+
+  - intent: ask_proceso_declaracion
+    examples: |
+      - cómo es el proceso?
+      - cómo funciona la declaración?
+      - pasos para declarar
+      - proceso de declaración
+      - cómo declaro con FastTax?
+      - explícame el proceso completo
+      - cómo hacer mi declaración?
+      - workflow de declaración
+      - fases del proceso
+
+  - intent: ask_formulario_sri
+    examples: |
+      - qué formulario debo usar?
+      - cuál es el formulario del SRI?
+      - formulario 102
+      - cómo lleno el formulario?
+      - dónde presento la declaración?
+      - formulario de impuesto a la renta
+      - casillas del formulario
+
+  - intent: ask_retencion
+    examples: |
+      - qué son las retenciones?
+      - retención en la fuente
+      - cómo funcionan las retenciones?
+      - me retuvieron impuesto
+      - retenciones en el sueldo
+      - tipos de retenciones
+      - retención de impuestos
+
+  - intent: ask_base_imponible
+    examples: |
+      - qué es la base imponible?
+      - cómo se calcula la base imponible?
+      - base de cálculo
+      - sobre qué se calcula el impuesto?
+      - fórmula base imponible
+      - qué incluye la base imponible?
+
+  - intent: ask_plazos
+    examples: |
+      - cuándo debo declarar?
+      - plazos de declaración
+      - fecha límite
+      - hasta cuándo puedo declarar?
+      - calendario tributario
+      - fechas del SRI
+      - cuándo vence la declaración?
+      - plazo según mi cédula
+
+  - intent: ask_ayuda
+    examples: |
+      - ayuda
+      - help
+      - necesito ayuda
+      - qué puedes hacer?
+      - en qué me puedes ayudar?
+      - qué temas manejas?
+      - opciones disponibles
+      - menú de ayuda
+      - qué información tienes?
+
+  - intent: request_example
+    examples: |
+      - dame un ejemplo
+      - quiero ver un ejemplo
+      - ejemplo práctico
+      - muéstrame un caso
+      - caso de ejemplo
+      - ejemplo de cálculo
+      - cómo sería con números reales?
+      - ejemplo concreto
+
+  - intent: ask_tabla_impuesto
+    examples: |
+      - cuál es la tabla de impuesto a la renta?
+      - tabla progresiva del SRI
+      - porcentajes de impuesto
+      - tramos de impuesto a la renta
+      - tabla 2025 impuesto
+      - cómo se aplica la tabla del SRI?
+      - fracción básica desgravada
+      - dame la tabla de impuestos
+      - porcentajes según ingresos
+
+  - intent: ask_obligaciones_tributarias
+    examples: |
+      - cuáles son mis obligaciones tributarias?
+      - qué debo hacer como contribuyente?
+      - obligaciones con el SRI
+      - qué impuestos debo declarar?
+      - qué debo cumplir con el SRI?
+      - deberes tributarios
+      - responsabilidades fiscales
+      - qué formularios debo presentar?
+      - calendario de obligaciones SRI
+
+  - intent: thank
+    examples: |
+      - gracias
+      - muchas gracias
+      - te lo agradezco
+      - muy amable
+      - thanks
+      - thank you
+      - gracias por tu ayuda
+      - gracias por la información
+      - te agradezco la ayuda
+      - gracias bot
