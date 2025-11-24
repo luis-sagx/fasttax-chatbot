@@ -25,3 +25,17 @@ rules:
     steps:
       - intent: thank
       - action: utter_thank
+
+  - rule: Activar formulario de cálculo de impuesto
+    steps:
+      - intent: calcular_impuesto
+      - action: calculo_impuesto_form
+      - active_loop: calculo_impuesto_form
+
+  - rule: Ejecutar cálculo después de completar formulario
+    condition:
+      - active_loop: calculo_impuesto_form
+    steps:
+      - action: calculo_impuesto_form
+      - active_loop: null
+      - action: action_calcular_impuesto_renta
